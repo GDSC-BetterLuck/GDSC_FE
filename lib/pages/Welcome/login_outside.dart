@@ -48,15 +48,21 @@ class _LoginOutsideWidgetState extends State<LoginOutsideWidget> {
         }),
       );
       if (response.statusCode == 200) {
-         var data = jsonDecode(response.body);
+        var data = jsonDecode(response.body);
         String userRole = data['data']['information']['role'];
-        String name = data['data']['information']['firstName'] +" "+data['data']['information']['lastName'];
+        String name = data['data']['information']['firstName'] +
+            " " +
+            data['data']['information']['lastName'];
         String phoneNumber = data['data']['information']['phoneNumber'];
-
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => ParentPage(role: userRole,name: name,phoneNumber: phoneNumber,)));
-      }
-      else{
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ParentPage(
+                      role: userRole,
+                      name: name,
+                      phoneNumber: phoneNumber,
+                    )));
+      } else {
         setState(() {
           error = "Password Incorrect";
         });
@@ -105,7 +111,11 @@ class _LoginOutsideWidgetState extends State<LoginOutsideWidget> {
               SizedBox(
                 height: 5,
               ),
-              Container(child: Text(error, style: TextStyle(color: Colors.red),)),
+              Container(
+                  child: Text(
+                error,
+                style: TextStyle(color: Colors.red),
+              )),
               SizedBox(
                 height: 5,
               ),
@@ -152,7 +162,18 @@ class _LoginOutsideWidgetState extends State<LoginOutsideWidget> {
                 height: 18.0,
               ),
               MaterialButton(
-                onPressed: () {authentication();},
+                onPressed: () {
+                  authentication();
+
+                  // Navigator.pushReplacement(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => ParentPage(
+                  //               role: "userRole",
+                  //               name: "name",
+                  //               phoneNumber: "phoneNumber",
+                  //             )));
+                },
                 minWidth: double.infinity,
                 height: 50.0,
                 color: Colors.lightBlue[700],

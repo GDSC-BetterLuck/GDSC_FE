@@ -15,21 +15,21 @@ class _PostAboutRouterState extends State<PostAboutRouter> {
   List<Post> posts = [
     Post(
         "This road is in bad condition",
-        "Phong cute",
+        "Quoc Phong",
         PostRoadInfo("HCMCity", "Quan 7"),
         const AssetImage("assets/images/map.png"),
         const AssetImage("assets/logo/small_logo.png"),
         DateTime(2024, 2, 25, 8, 50)),
     Post(
-        "This road is in bad condition",
-        "Phong cute",
+        "Some building is being constructed so it is very dusty",
+        "Quoc Phong",
         PostRoadInfo("HCMCity", "Quan 7"),
         const AssetImage("assets/images/traffic.png"),
         const AssetImage("assets/logo/small_logo.png"),
         DateTime(2024, 2, 25, 8, 50)),
     Post(
         "This road is in bad condition",
-        "Phong cute",
+        "Quoc Phong",
         PostRoadInfo("HCMCity", "Quan 7"),
         const AssetImage("assets/images/traffic.png"),
         const AssetImage("assets/logo/small_logo.png"),

@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   };
   static const _paris = LatLng(20.98996487480751, 105.94387681962446);
   static const _dublin = LatLng(21.01539401156824, 105.9422768653753);
-  static const _here = LatLng(21.00635409146982, 105.93146626670605);
+  static const _center = LatLng(21.00635409146982, 105.93146626670605);
 
   var zoomMap = 13;
   void zoomIn() {
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     const Marker(
       width: 80,
       height: 80,
-      point: _here,
+      point: _center,
       child: Icon(
         Icons.location_on,
         size: 40,
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ];
       }
-      mapController.move(mapController.camera.center, 13);
+      mapController.move(mapController.camera.center, 14);
     });
   }
 
@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
         FlutterMap(
           mapController: mapController,
           options: MapOptions(
-            initialCenter: _here,
+            initialCenter: _center,
             initialZoom: zoomMap.toDouble(),
             maxZoom: 100,
             minZoom: 3,
